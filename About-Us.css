@@ -1,0 +1,8 @@
+.card-container p{
+    padding: 0 .7rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.card-container span{
+    color: crimson;
+    font-weight: bold;
+}

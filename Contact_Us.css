@@ -1,0 +1,32 @@
+.card-container .main-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-container form{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.card-container form input{
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    border-style: none;
+    background-color: rgb(228, 227, 227);
+    color: rgb(0, 0, 0);
+    width: 300px;
+}
+.card-container form button{
+    width: 300px;
+    padding: .5rem 1rem;
+    background-color: black;
+    color: white;
+    border-radius: .5rem;
+    border-style: none;
+}
+span{
+    display: none;
+}

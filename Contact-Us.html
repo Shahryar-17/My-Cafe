@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Contact_Us.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- Navbar -->
+
+    <div class="container-fluid">
+        <div class="container navbar-container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid navbar-res">
+                    <div class="logo">
+                        <a class="navbar-brand" href="index.html">MY CAFE</a>
+                        <hr>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="Food.html">Food</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Drinks.html">Drinks</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Desert.html">Desert</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="About-Us.html">Aboust Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Contact-Us.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+<!-- Contact Us -->
+
+<div class="container card-container">
+    <h1>CONTACT US</h1>
+    <div class="main-box">
+        <form>
+
+            <input placeholder="Enter your email" type="email" id="email">
+            <span id="emailError">Invalid Email</span>
+
+            <input type="number" id="contact" placeholder="Enter your number">
+            <span id="contactError">Imvalid Number</span>
+
+            <input type="text" placeholder="Write your complain here" required name="" id="complain">
+            <span id="complainError">Write something</span>
+
+            <button type="submit" onclick="push(event)">Submit</button>
+
+        </form>
+    </div>
+</div>
+
+<script>
+    function showError(id, show){
+        document.getElementById(id).style.display = show ? "block" : "none";
+    }
+    function push(event){
+        event.preventDefault();
+
+        let email = document.getElementById('email').value.trim();
+        let contact = document.getElementById('contact').value.trim();
+        let complain = document.getElementById('complain').value.trim();
+
+        const emailPattern = /^[A-Za-z0-9._/%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{3,}$/;
+        const contactPattern = /^03[0-9]{9}$/;
+        const complainPattern = /^[A-Za-z0-9]{3,}$/;
+
+        let isValid = true;
+
+        if (!emailPattern.test(email)){
+            showError('emailError', true);
+            isValid = false;
+        } else {
+            showError('emailError', false);
+        }
+        if (!contactPattern.test(contact)){
+            showError('contactError', true);
+            isValid = false;
+        } else {
+            showError('contactError', false);
+        }
+        if (!complainPattern.test(complain)){
+            showError('complainError', true);
+            isValid = false;
+        } else {
+            showError('complainError', false);
+        }
+        if (isValid) {
+                alert("Complain submitted");
+                return true;
+            }
+
+            return false;
+    }
+</script>
+
+    <!-- Footer -->
+
+    <footer>
+        <div class="container">
+            <h6>Best Quality Products</h6>
+            <h6>All Rights Reserved</h6>
+            <h6>24/7 Availibility</h6>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

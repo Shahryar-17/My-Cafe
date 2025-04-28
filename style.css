@@ -1,0 +1,135 @@
+@media (min-width:992px) {
+    .navbar-res {
+        display: flex;
+        justify-content: space-between !important;
+        flex-direction: column !important;
+    }
+}
+
+@media (max-width:992px) {
+    hr {
+        display: none;
+    }
+    footer .container {
+        display: flex;
+        flex-direction: column;
+        padding: 0rem 3rem;
+    }
+}
+ body{
+    background-color: black;
+    color: white !important;
+ }
+ .navbar-toggler{
+    color: white !important;
+    background-color: white;
+ }
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: center;
+    text-align: center !important;
+    color: crimson !important;
+}
+
+hr {
+    width: 1200px;
+}
+
+.nav-item {
+    font-size: 1.1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nav-item a {
+    margin: 0rem .5rem;
+    border-radius: .5rem;
+    color: rgb(255, 255, 255) !important;
+}
+
+.nav-item a:hover {
+    color: crimson !important;
+}
+
+/* Cards */
+
+.card-container .bs_image{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.card-container h1 {
+    text-align: center;
+    text-shadow: 2px 4px 7px rgba(87, 87, 87, 0.6);
+    font-weight: bold;
+    margin: 5rem 0;
+    background-color: red;
+    color: white;
+    border-radius: .5rem;
+    padding: .5rem 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.card-container .cards {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 5rem;
+    flex-wrap: wrap;
+}
+
+.card-container .cards .card {
+    border-style: none;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.6);
+    width: 250px;
+    border-radius: .5rem;
+    transition: all .5s ease ;
+}
+.card-container .cards .card:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.card-container .cards .card .image img {
+    width: 250px;
+    height: 180px;
+    border-top-right-radius: .5rem;
+    border-top-left-radius: .5rem;
+}
+
+.card-container .cards .card .order-now {
+    text-align: center;
+    padding: 2rem;
+}
+
+.card-container .cards .card .order-now a {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: .5rem 2rem;
+    border-radius: .5rem;
+}
+
+.card-container .cards .card .order-now a:hover {
+    background-color: crimson;
+    color: white;
+}
+
+/* Footer */
+
+footer {
+    background-color: black;
+    padding: 1rem 0;
+    color: white;
+    margin-top: 5rem;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    padding: 0rem 3rem;
+}
